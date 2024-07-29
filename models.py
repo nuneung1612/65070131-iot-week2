@@ -14,6 +14,23 @@ class Book(Base):
      author = Column(String, index=True)
      year = Column(Integer, index=True)
      is_published = Column(Boolean, index=True)
+     des = Column(String, index=True)
+     preview = Column(String, index=True)
+     genre = Column(String, index=True)
+
+class Menu(Base):
+    __tablename__ = 'menu'
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, index=True)
+    price = Column(Integer, index=True)
+    des = Column(String, index=True)
+
+class Order(Base):
+    __tablename__ = 'order'
+    order_id = Column(Integer, primary_key=True)
+    id = Column(Integer, index=True)
+    quan = Column(Integer, index=True)
+    detail = Column(String, index=True) 
 
 class Student(Base):
     __tablename__ = 'students'
